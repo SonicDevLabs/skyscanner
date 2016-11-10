@@ -68,8 +68,8 @@ gulp.task("babel", function() {
     .pipe(babel({
       presets: ['es2015']
     }))
-    // .pipe(concat('bundle.scripts'))
-    // .pipe(uglify())
+    .pipe(concat('bundle.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(scriptsPaths.dest));
 });
 
